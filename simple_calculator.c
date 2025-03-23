@@ -38,3 +38,33 @@ int main() {
     scanf("%d", &a);
 
     printf("Enter 2nd number: ");
+    scanf("%d", &b);
+
+    printf("Enter operation type (add = 1, sub = 2, mul = 3, div = 4): ");
+    scanf("%d", &input);
+
+    switch (input) {
+        case 1:
+            printf("Result: %d\n", add(a,b));
+            break;
+        case 2:
+            printf("Result: %d\n", sub(a,b));
+            break;
+        case 3:
+            printf("Result: %d\n", mul(a,b));
+            break;
+        case 4:
+            if (div(a,b) == 0.0) {
+                printf("Can't divide by Zero");
+            }
+            else {
+                printf("Result: %.2f\n", div(a,b));
+            }
+            break;
+        default:
+            printf("you entered wrong operation type");
+            break;
+    }
+
+    return 0;
+}
